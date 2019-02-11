@@ -1,0 +1,25 @@
+{
+  "name": "pkg-police",
+  "version": "1.0.0",
+  "description": "Simple CLI tool that keeps your package.js file up to best practises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'no tests'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedreviljoen/pkg-police.git"
+  },
+  "keywords": [
+    "Package",
+    "checker",
+    "package.json checker",
+    "package checker"
+  ],
+  "author": "Pedre Viljoen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedreviljoen/pkg-police/issues"
+  },
+  "homepage": "https://github.com/pedreviljoen/pkg-police#readme"
+}
