@@ -25,13 +25,7 @@
 ## Install
 
 ```sh
-npm install pkg-police
-```
-
-&
-
-```sh
-npm link
+npm install -g pkg-police
 ```
 
 ## Usage
