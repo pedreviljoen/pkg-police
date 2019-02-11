@@ -20,7 +20,10 @@
     "Package",
     "checker",
     "package.json checker",
-    "package checker"
+    "package checker",
+    "format",
+    "json checker",
+    "helper"
   ],
   "author": "Pedre Viljoen",
   "license": "MIT",
