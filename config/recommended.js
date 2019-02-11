@@ -3,5 +3,8 @@ module.exports = [
     'version',
     'description',
     'main',
-    'license'
+    'license',
+    'author',
+    'scripts',
+    'repository'
 ]
