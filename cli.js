@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { missingFields } = require("./reader")
 const question = require("./config/question")
 const chalk = require("chalk")
