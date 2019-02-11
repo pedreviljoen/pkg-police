@@ -25,18 +25,6 @@
 ## Install
 
 ```sh
-yarn add pkg-police
-```
-
-&
-
-```sh
-yarn link
-```
-
-OR
-
-```sh
 npm install pkg-police
 ```
 

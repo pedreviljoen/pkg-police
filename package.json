@@ -1,14 +1,20 @@
 {
   "name": "pkg-police",
-  "version": "1.0.1",
-  "description": "Simple CLI tool that keeps your package.js file up to best practises",
-  "main": "index.js",
+  "version": "1.0.2",
+  "description": "Simple CLI tool that keeps your package.js file up to best practices",
+  "main": "cli.js",
   "scripts": {
-    "test": "echo 'no tests'"
+    "test": "echo 'no tests'",
+    "format": "prettier --no-semi --tab-width 2 --print-width 100 --write index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pedreviljoen/pkg-police.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format"
+    }
   },
   "keywords": [
     "Package",
@@ -30,6 +36,10 @@
     "read-pkg-up": "^4.0.0"
   },
   "bin": {
-    "police": "./index.js"
+    "police": "./cli.js"
+  },
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "prettier": "^1.16.4"
   }
 }
