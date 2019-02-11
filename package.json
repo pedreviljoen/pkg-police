@@ -1,11 +1,11 @@
 {
   "name": "pkg-police",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple CLI tool that keeps your package.js file up to best practices",
   "main": "cli.js",
   "scripts": {
     "test": "echo 'no tests'",
-    "format": "prettier --no-semi --tab-width 2 --print-width 100 --write index.js"
+    "format": "prettier --no-semi --tab-width 2 --print-width 100 --write cli.js"
   },
   "repository": {
     "type": "git",
