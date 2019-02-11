@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const recommended = require('./config/recommended')
+const recommended = require("./config/recommended")
 const { missingFields } = require("./reader")
 const question = require("./config/question")
 const chalk = require("chalk")
@@ -34,6 +34,7 @@ const run = async () => {
     if (missing.length > 0) {
       console.log("We recommend you add the following fields: ")
       missing.forEach(item => console.log(colors.red.bold(item)))
+      
     } else {
       console.log(colors.green("Great! Seems like you are up to scratch."))
     }
