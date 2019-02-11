@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+const recommended = require('./config/recommended')
 const { missingFields } = require("./reader")
 const question = require("./config/question")
 const chalk = require("chalk")
@@ -29,7 +29,7 @@ const run = async () => {
   const { CHECKER } = answer
 
   if (CHECKER.toLowerCase() == "y") {
-    const missing = await missingFields()
+    const missing = await missingFields(recommended)
 
     if (missing.length > 0) {
       console.log("We recommend you add the following fields: ")
