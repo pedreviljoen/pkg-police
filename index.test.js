@@ -25,3 +25,15 @@ test('Valid array', () => {
         expect(Object.keys(res.pkg)).toBeInstanceOf(Array)
     })
 })
+
+test('Should return array with one outstanding', () => {
+    return missingFields(recommendedTest).then(res => {
+        expect(res[0]).toBeDefined()
+    })
+})
+
+test('Outstanding should be of type string', () => {
+    return missingFields(recommendedTest).then(res => {
+        expect(typeof res[0]).toBe('string')
+    })
+})
