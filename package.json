@@ -1,6 +1,6 @@
 {
   "name": "pkg-police",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple CLI tool that keeps your package.js file up to best practices",
   "main": "cli.js",
   "scripts": {
@@ -13,16 +13,21 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format"
+      "pre-commit": "yarn format && yarn test"
     }
   },
   "keywords": [
     "Package",
     "checker",
     "package.json checker",
-    "package checker"
+    "package checker",
+    "format",
+    "json checker",
+    "helper"
   ],
-  "author": "Pedre Viljoen",
+  "author": {
+    "name": "Pedre Viljoen"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pedreviljoen/pkg-police/issues"
@@ -33,7 +38,8 @@
     "colors": "^1.3.3",
     "figlet": "^1.2.1",
     "inquirer": "^6.2.2",
-    "read-pkg-up": "^4.0.0"
+    "read-pkg-up": "^4.0.0",
+    "write-pkg": "^3.2.0"
   },
   "bin": {
     "police": "./cli.js"
