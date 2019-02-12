@@ -1,4 +1,4 @@
-const { missingFields, readContents } = require('./reader')
+const { missingFields, readContents } = require('./src/reader')
 const recommendedTest = require('./config/recommendedTest')
 const recommended = require('./config/recommended')
 

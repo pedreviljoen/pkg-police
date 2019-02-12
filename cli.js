@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 const recommended = require("./config/recommended")
-const { missingFields } = require("./reader")
+const { missingFields } = require("./src/reader")
+const { promptQuestion, addFieldQuestionBuilder } = require('./src/consolePrompter')
+const { writeToPackage } = require('./src/writer')
 const question = require("./config/question")
 const chalk = require("chalk")
 const figlet = require("figlet")
-const inquirer = require("inquirer")
 const colors = require("colors")
 
 const init = () => {
@@ -19,21 +20,19 @@ const init = () => {
   )
 }
 
-const askChecker = () => {
-  return inquirer.prompt(question)
-}
-
 const run = async () => {
   init()
-  const answer = await askChecker()
+  const answer = await promptQuestion(question)
   const { CHECKER } = answer
 
   if (CHECKER.toLowerCase() == "y") {
     const missing = await missingFields(recommended)
 
     if (missing.length > 0) {
-      console.log("We recommend you add the following fields: ")
-      missing.forEach(item => console.log(colors.red.bold(item)))
+      const fieldQuestions = addFieldQuestionBuilder(missing)
+      console.log(colors.red.bold("Some fields missing, please provide details for & we'll add them: "))
+      const optionsToAdd = await promptQuestion(fieldQuestions)
+      await writeToPackage(optionsToAdd)
     } else {
       console.log(colors.green("Great! Seems like you are up to scratch."))
     }
