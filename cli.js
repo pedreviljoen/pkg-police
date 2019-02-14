@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const recommended = require("./config/recommended")
 const { missingFields } = require("./src/reader")
-const { promptQuestion, addFieldQuestionBuilder } = require('./src/consolePrompter')
-const { writeToPackage } = require('./src/writer')
+const { promptQuestion, addFieldQuestionBuilder } = require("./src/consolePrompter")
+const { writeToPackage } = require("./src/writer")
 const question = require("./config/question")
 const chalk = require("chalk")
 const figlet = require("figlet")
@@ -30,7 +30,9 @@ const run = async () => {
 
     if (missing.length > 0) {
       const fieldQuestions = addFieldQuestionBuilder(missing)
-      console.log(colors.red.bold("Some fields missing, please provide details for & we'll add them: "))
+      console.log(
+        colors.red.bold("Some fields missing, please provide details for & we'll add them: ")
+      )
       const optionsToAdd = await promptQuestion(fieldQuestions)
       await writeToPackage(optionsToAdd)
     } else {

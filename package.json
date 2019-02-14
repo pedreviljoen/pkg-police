@@ -5,7 +5,7 @@
   "main": "cli.js",
   "scripts": {
     "test": "yarn jest",
-    "format": "prettier --no-semi --tab-width 2 --print-width 100 --write cli.js"
+    "format": "prettier --no-semi --tab-width 2 --print-width 100 --write **/*.js"
   },
   "repository": {
     "type": "git",
