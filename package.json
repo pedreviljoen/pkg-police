@@ -1,6 +1,6 @@
 {
   "name": "pkg-police",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple CLI tool that keeps your package.js file up to best practices",
   "main": "cli.js",
   "scripts": {
