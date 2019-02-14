@@ -1,9 +1,1 @@
-module.exports = [
-    'name',
-    'version',
-    'description',
-    'main',
-    'license',
-    'hello',
-    'repository'
-]
+module.exports = ["name", "version", "description", "main", "license", "hello", "repository"]
