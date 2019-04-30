@@ -1,6 +1,6 @@
 {
   "name": "pkg-police",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple CLI tool that keeps your package.js file up to best practices",
   "main": "cli.js",
   "scripts": {
@@ -39,7 +39,7 @@
     "figlet": "^1.2.1",
     "inquirer": "^6.2.2",
     "read-pkg-up": "^5.0.0",
-    "write-pkg": "^3.2.0"
+    "write-pkg": "^4.0.0"
   },
   "bin": {
     "police": "./cli.js"
