@@ -45,7 +45,7 @@
     "police": "./cli.js"
   },
   "devDependencies": {
-    "husky": "^2.1.0",
+    "husky": "^3.0.0",
     "jest": "^24.1.0",
     "prettier": "^1.16.4"
   }
